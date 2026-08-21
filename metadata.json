@@ -1,0 +1,6 @@
+{
+  "name": "BBB Ltd — Логистика опасных грузов",
+  "description": "Специализированная логистика опасных грузов: 20 лет безопасного налива, слива и перевозки серной кислоты и аммиака в Казахстане.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

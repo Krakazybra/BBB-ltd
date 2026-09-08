@@ -1,5 +1,12 @@
 import { GalleryItem, ServiceItem, StationLocation, TeamMember } from '../types';
 import directorPhoto from '../assets/images/director_mukhyshev.jpg';
+import bbbTruckTerminal from '../assets/images/bbb_truck_terminal_1788882735423.jpg';
+import bbbEstakadaLoading from '../assets/images/bbb_estakada_loading_1788882759601.jpg';
+import bbbManifoldValves from '../assets/images/bbb_manifold_valves_1788882777384.jpg';
+import bbbCloseCorrosive from '../assets/images/bbb_close_corrosive_1788882800635.jpg';
+import bbbTruckSideview from '../assets/images/bbb_truck_sideview_1788882822194.jpg';
+import heroTrainTerminal from '../assets/images/hero_train_terminal_1788881859224.jpg';
+import railwayLogisticsHub from '../assets/images/railway_logistics_hub_1788881921295.jpg';
 
 export const TEAM_MEMBERS: Record<'ru' | 'kz', TeamMember[]> = {
   ru: [
@@ -80,25 +87,25 @@ export const ASSETS = {
   footerLogo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtHmz-BcSfW5nj5ssrxsdNsl_cFBOsHrSSZQAOmSs2tysfqeqEMXaLI-WfcrQq3cVGP-XfqVTZDwjPoIOQ1gPc7lxMTx9mKMm4g97lbsnfr7br3BYv_V_e2FDqKAikgHnczQs-Pv8_IOETA29gPz_PmrN0VDvUkKmtocr7Dkov0Q5UiXZw0-fYBQdrfThT9T4_Z-6J_WOdbp3TMEszKyge3G_3IoYyTrefaILBByGnBIPR94I6ixu94GTtw2sB-97r4g',
   
   // Hero & General
-  heroBg: 'https://lh3.googleusercontent.com/aida/AEtjO1WgU9lVZSkrZm6Kp1tSe976n8Ra7tRyjzrDP_bVXi1wvugDTNCBfG0yHR4lwBEjsYalHRfo_Qsj9FdIoGIvXRGkkKeOMVrUHSe9RvWr1y5vqOSCeeuL16OC5U6Skm6KQF1_CPFYjIDfksz1N0PajNzFGU0Pf_qpcbrs7nFCgOwzxCZYDa5ZXNeZso9tZQd-FTInajnz3zyh66cPTcRIkcY8ev05otz1g8-ceE6zG_HfDLK_v_IwvbEScA',
-  aboutBriefImg: 'https://lh3.googleusercontent.com/aida/AEtjO1XMciWlyNJDcMuVbnhWZG3b_qdopY5nLpkgBrGcD0FauspDY0rdjxgepgrlXrnxcp--Kuy3ZMV6Txo_Xpp4FuYgoxfRwNwxU1gJ6k91poMRaovC2FP95mzQCv9yPoxGVtP2gcvZ_V9SktCjNsAfNNvcsCbyu2xv7p0krltUw5r9hzXi0Hpjz-nIHXeXdYkViNqqFGiOJwlGb5fJfr0PXQAAeVqGNVQIf7SN73lqHKJcO5wgF4fa50TvCyI',
+  heroBg: bbbTruckTerminal,
+  aboutBriefImg: bbbEstakadaLoading,
   
   // Services
-  serviceAcidImg: 'https://lh3.googleusercontent.com/aida/AEtjO1VgAHQPFiikKLDg8pIZGdKsuhpMmieT0COJTC2Xc0FIrbueJ8-2i06NybHL10j2jZL0AMyvWaHSDzCrZUz1fn3x5ptJy_Ld55TRNvMf3_-rGqXQ4gOja-LY9FmMRs_TS7m1JBsyPedUENfZcqnj7yArCDqnlURNk1MVenE2t_CWHriFctMw68PCtsdJba8eC4D0poE0Rv0PFwkKUqaPxPDkTVZFm20kia5wsdSYxt1U-ATV7edNWkHl0mo',
-  serviceAmmoniaImg: 'https://lh3.googleusercontent.com/aida/AEtjO1XMciWlyNJDcMuVbnhWZG3b_qdopY5nLpkgBrGcD0FauspDY0rdjxgepgrlXrnxcp--Kuy3ZMV6Txo_Xpp4FuYgoxfRwNwxU1gJ6k91poMRaovC2FP95mzQCv9yPoxGVtP2gcvZ_V9SktCjNsAfNNvcsCbyu2xv7p0krltUw5r9hzXi0Hpjz-nIHXeXdYkViNqqFGiOJwlGb5fJfr0PXQAAeVqGNVQIf7SN73lqHKJcO5wgF4fa50TvCyI',
-  serviceLogisticsImg: 'https://lh3.googleusercontent.com/aida/AEtjO1VztHh2elgHVW78phdkoYm6kBejUcaRCmapdipixxzP9Oy-AuTNcV6w4Aw7dnylSiLQ23eoQDapiTB2blVk9xPU08zTH4Jh2shc4GgExbe74yMKl_OypME2J8lM-3IyKcu_Zm4i6zjQ9gE1rk07sJPKU63-kE-vokJzkdUgjbu4wvlj0sNC9mycFbgAlT6AB3-JmAzHq8VTtRoSVnwYHaNL4YWtaDLS65kaPPl9BQLumQbPH1LzokMt_8M',
+  serviceAcidImg: bbbCloseCorrosive,
+  serviceAmmoniaImg: bbbTruckSideview,
+  serviceLogisticsImg: bbbTruckTerminal,
   
   // About Page
-  aboutTruckLarge: 'https://lh3.googleusercontent.com/aida/AEtjO1UYYnhcMGqQVK8FBc5xW6_bQwueJ8fX5GUUYfVDYIMaFaKqL0bDoSsZkA4QYVoNpzmlZvhs1013ANKybYitHJaEXcupx-DEo711w2Rv18zzHCeJF0xTAz8ymn_WKx8dqJyMW7cT9DAyVqjgguGUmm8bB65gGzN9LE1Mn9gf0YJ-DiPHEPBlKPglTQjddDHA0kvzK4ZW5pMFQkeTXhjVVG753KKSC93t959XaRC-3J5_GVEnLuM9QRSiwZ8',
-  aboutEstakada: 'https://lh3.googleusercontent.com/aida/AEtjO1XGSk2DWCpb5fFbmp383r4Y84Cscuub8VBS0Ur2gJVPEjLRWg-WxmRdBwyKv-w_o-sHL-wDCe8mY7LyCQyIItvZAEncFoCTNDIxg7PLJlYxDavaAMJJv9ycHpBIz-lFYNi38F6v6QqJPLt_UfCJGHGIgkcJijEX0MKExoxddVfklXXUJvsRiDBMVpJQsdD1Jq83kfgww7-7FdhflaJC-tQfAlQlPkSZ6ZXBXFAqIvdc6UWnVUaukVtuw_c',
+  aboutTruckLarge: bbbTruckSideview,
+  aboutEstakada: bbbManifoldValves,
 
   // Gallery
-  gallery1: 'https://lh3.googleusercontent.com/aida/AEtjO1XMciWlyNJDcMuVbnhWZG3b_qdopY5nLpkgBrGcD0FauspDY0rdjxgepgrlXrnxcp--Kuy3ZMV6Txo_Xpp4FuYgoxfRwNwxU1gJ6k91poMRaovC2FP95mzQCv9yPoxGVtP2gcvZ_V9SktCjNsAfNNvcsCbyu2xv7p0krltUw5r9hzXi0Hpjz-nIHXeXdYkViNqqFGiOJwlGb5fJfr0PXQAAeVqGNVQIf7SN73lqHKJcO5wgF4fa50TvCyI',
-  gallery2: 'https://lh3.googleusercontent.com/aida/AEtjO1VztHh2elgHVW78phdkoYm6kBejUcaRCmapdipixxzP9Oy-AuTNcV6w4Aw7dnylSiLQ23eoQDapiTB2blVk9xPU08zTH4Jh2shc4GgExbe74yMKl_OypME2J8lM-3IyKcu_Zm4i6zjQ9gE1rk07sJPKU63-kE-vokJzkdUgjbu4wvlj0sNC9mycFbgAlT6AB3-JmAzHq8VTtRoSVnwYHaNL4YWtaDLS65kaPPl9BQLumQbPH1LzokMt_8M',
-  gallery3: 'https://lh3.googleusercontent.com/aida/AEtjO1UYYnhcMGqQVK8FBc5xW6_bQwueJ8fX5GUUYfVDYIMaFaKqL0bDoSsZkA4QYVoNpzmlZvhs1013ANKybYitHJaEXcupx-DEo711w2Rv18zzHCeJF0xTAz8ymn_WKx8dqJyMW7cT9DAyVqjgguGUmm8bB65gGzN9LE1Mn9gf0YJ-DiPHEPBlKPglTQjddDHA0kvzK4ZW5pMFQkeTXhjVVG753KKSC93t959XaRC-3J5_GVEnLuM9QRSiwZ8',
-  gallery4: 'https://lh3.googleusercontent.com/aida/AEtjO1XGSk2DWCpb5fFbmp383r4Y84Cscuub8VBS0Ur2gJVPEjLRWg-WxmRdBwyKv-w_o-sHL-wDCe8mY7LyCQyIItvZAEncFoCTNDIxg7PLJlYxDavaAMJJv9ycHpBIz-lFYNi38F6v6QqJPLt_UfCJGHGIgkcJijEX0MKExoxddVfklXXUJvsRiDBMVpJQsdD1Jq83kfgww7-7FdhflaJC-tQfAlQlPkSZ6ZXBXFAqIvdc6UWnVUaukVtuw_c',
-  gallery5: 'https://lh3.googleusercontent.com/aida/AEtjO1WgU9lVZSkrZm6Kp1tSe976n8Ra7tRyjzrDP_bVXi1wvugDTNCBfG0yHR4lwBEjsYalHRfo_Qsj9FdIoGIvXRGkkKeOMVrUHSe9RvWr1y5vqOSCeeuL16OC5U6Skm6KQF1_CPFYjIDfksz1N0PajNzFGU0Pf_qpcbrs7nFCgOwzxCZYDa5ZXNeZso9tZQd-FTInajnz3zyh66cPTcRIkcY8ev05otz1g8-ceE6zG_HfDLK_v_IwvbEScA',
-  gallery6: 'https://lh3.googleusercontent.com/aida/AEtjO1VgAHQPFiikKLDg8pIZGdKsuhpMmieT0COJTC2Xc0FIrbueJ8-2i06NybHL10j2jZL0AMyvWaHSDzCrZUz1fn3x5ptJy_Ld55TRNvMf3_-rGqXQ4gOja-LY9FmMRs_TS7m1JBsyPedUENfZcqnj7yArCDqnlURNk1MVenE2t_CWHriFctMw68PCtsdJba8eC4D0poE0Rv0PFwkKUqaPxPDkTVZFm20kia5wsdSYxt1U-ATV7edNWkHl0mo',
+  gallery1: bbbTruckTerminal,
+  gallery2: bbbEstakadaLoading,
+  gallery3: bbbManifoldValves,
+  gallery4: bbbTruckSideview,
+  gallery5: bbbCloseCorrosive,
+  gallery6: heroTrainTerminal,
 };
 
 export const STATIONS: StationLocation[] = [

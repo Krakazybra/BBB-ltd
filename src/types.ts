@@ -1,6 +1,19 @@
-export type PageId = 'home' | 'about' | 'services' | 'gallery' | 'contacts';
+export type PageId = 'home' | 'about' | 'services' | 'team' | 'gallery' | 'contacts';
 
 export type Language = 'ru' | 'kz';
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  badge: string;
+  bio: string;
+  responsibilities: string[];
+  photoPlaceholderText: string;
+  initials: string;
+  photoUrl?: string;
+  contactNote?: string;
+}
 
 export interface ServiceItem {
   id: string;

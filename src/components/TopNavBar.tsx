@@ -25,6 +25,7 @@ export const TopNavBar: React.FC<TopNavBarProps> = ({
     { id: 'home', label: t.nav.home },
     { id: 'about', label: t.nav.about },
     { id: 'services', label: t.nav.services },
+    { id: 'team', label: (t.nav as any).team || 'Команда' },
     { id: 'gallery', label: t.nav.gallery },
     { id: 'contacts', label: t.nav.contacts },
   ];
@@ -41,35 +42,35 @@ export const TopNavBar: React.FC<TopNavBarProps> = ({
   };
 
   return (
-    <header id="main-header" className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#DBE2DC] transition-all">
+    <header id="main-header" className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#e2e8e3] transition-all shadow-[0_1px_3px_rgba(0,0,0,0.03)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-[68px]">
           {/* Logo */}
           <div
             id="brand-logo-button"
             onClick={() => handleNavClick('home')}
-            className="cursor-pointer flex items-center space-x-3 group select-none"
+            className="cursor-pointer flex items-center space-x-2.5 sm:space-x-3 group select-none shrink-0"
           >
-            <div className="h-12 flex items-center">
+            <div className="h-9 sm:h-10 flex items-center">
               <img
                 src={ASSETS.headerLogo}
                 alt="BBB LTD Logo"
-                className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-102"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="hidden sm:flex flex-col border-l border-[#DBE2DC] pl-3">
-              <span className="text-[11px] font-mono tracking-widest text-[#536154] uppercase leading-tight font-semibold">
-                Логистика опасных грузов
+            <div className="hidden lg:flex flex-col border-l border-[#d5ded7] pl-2.5">
+              <span className="text-[10px] font-mono tracking-wider text-[#536154] uppercase leading-none font-semibold">
+                Опасные грузы
               </span>
-              <span className="text-[10px] text-[#747874] font-medium">
-                Казахстан • 20 лет опыта
+              <span className="text-[10px] text-[#747874] font-medium mt-0.5">
+                20 лет опыта в РК
               </span>
             </div>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav id="desktop-nav-menu" className="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <nav id="desktop-nav-menu" className="hidden md:flex items-center space-x-1 lg:space-x-1.5">
             {navItems.map((item) => {
               const isActive = activePage === item.id;
               return (
@@ -77,29 +78,26 @@ export const TopNavBar: React.FC<TopNavBarProps> = ({
                   key={item.id}
                   id={`nav-link-${item.id}`}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-3.5 py-2 text-[15px] font-medium transition-colors relative tracking-tight ${
+                  className={`px-3 py-1.5 text-sm transition-colors relative tracking-tight rounded-lg cursor-pointer ${
                     isActive
-                      ? 'text-[#006a37] font-semibold'
-                      : 'text-[#536154] hover:text-[#191c1b]'
+                      ? 'text-[#006a37] font-semibold bg-[#eaf5ee]'
+                      : 'text-[#536154] hover:text-[#191c1b] hover:bg-[#f4f6f4]'
                   }`}
                 >
                   {item.label}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-3 right-3 h-[2px] bg-[#006a37] rounded-full" />
-                  )}
                 </button>
               );
             })}
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="flex items-center space-x-2 sm:space-x-2.5 shrink-0">
             {/* Language Switcher */}
-            <div id="language-switcher" className="flex items-center border border-[#DBE2DC] rounded-lg overflow-hidden p-0.5 bg-[#f9faf8]">
+            <div id="language-switcher" className="flex items-center border border-[#d5ded7] rounded-lg overflow-hidden p-0.5 bg-[#f7f9f7]">
               <button
                 id="lang-btn-ru"
                 onClick={() => onLanguageChange('ru')}
-                className={`px-2.5 py-1 text-xs font-mono font-semibold uppercase rounded transition-colors ${
+                className={`px-2 py-0.5 text-[11px] font-mono font-semibold uppercase rounded transition-colors ${
                   language === 'ru'
                     ? 'bg-[#006a37] text-white shadow-xs'
                     : 'text-[#536154] hover:text-[#191c1b]'
@@ -110,7 +108,7 @@ export const TopNavBar: React.FC<TopNavBarProps> = ({
               <button
                 id="lang-btn-kz"
                 onClick={() => onLanguageChange('kz')}
-                className={`px-2.5 py-1 text-xs font-mono font-semibold uppercase rounded transition-colors ${
+                className={`px-2 py-0.5 text-[11px] font-mono font-semibold uppercase rounded transition-colors ${
                   language === 'kz'
                     ? 'bg-[#006a37] text-white shadow-xs'
                     : 'text-[#536154] hover:text-[#191c1b]'
@@ -120,34 +118,34 @@ export const TopNavBar: React.FC<TopNavBarProps> = ({
               </button>
             </div>
 
-            {/* Quick WhatsApp Call to Action */}
+            {/* Direct WhatsApp Action Button */}
             <button
-              id="header-whatsapp-cta"
+              id="header-whatsapp-btn"
               onClick={handleWhatsAppDirect}
-              className="hidden lg:inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-4 py-2.5 rounded-lg text-sm font-semibold shadow-xs transition-all hover:shadow-md cursor-pointer"
+              className="hidden sm:inline-flex items-center space-x-1.5 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-xs transition-colors cursor-pointer"
             >
-              <span className="material-symbols-outlined text-[18px]">chat</span>
-              <span className="whitespace-nowrap">{t.nav.writeWhatsapp}</span>
+              <span className="material-symbols-outlined text-[16px]">chat</span>
+              <span>WhatsApp</span>
             </button>
 
-            {/* Quote Quick Trigger button for tablet/desktop */}
-            <button
-              id="header-quote-button"
-              onClick={onOpenQuoteModal}
-              className="hidden sm:inline-flex lg:hidden items-center space-x-1.5 bg-[#006a37] hover:bg-[#00522b] text-white px-3.5 py-2 rounded-lg text-xs font-semibold shadow-xs transition-all cursor-pointer"
+            {/* Direct Phone Link */}
+            <a
+              id="header-phone-link"
+              href="tel:+77057838486"
+              className="hidden xl:inline-flex items-center space-x-1.5 text-xs font-mono font-semibold text-[#191c1b] hover:text-[#006a37] px-2.5 py-1.5 rounded-lg bg-[#f4f6f4] border border-[#e2e8e3] transition-colors"
             >
-              <span className="material-symbols-outlined text-[16px]">calculate</span>
-              <span>Расчет</span>
-            </button>
+              <Phone size={13} className="text-[#006a37]" />
+              <span>+7 705 783 84 86</span>
+            </a>
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile Menu Button */}
             <button
               id="mobile-menu-toggle"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg border border-[#DBE2DC] text-[#191c1b] hover:bg-[#f2f4f1] transition-colors"
+              className="md:hidden p-2 text-[#536154] hover:text-[#191c1b] hover:bg-[#f4f6f4] rounded-lg cursor-pointer"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>

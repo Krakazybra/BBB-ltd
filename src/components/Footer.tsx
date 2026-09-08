@@ -21,11 +21,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language }) => {
   };
 
   return (
-    <footer id="app-footer" className="bg-[#101913] text-[#e0e3de] border-t border-[#1e2e23] pt-14 pb-10">
+    <footer id="app-footer" className="bg-[#101913] text-[#e0e3de] border-t border-[#1e2e23] pt-10 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-[#213527]">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-[#213527]">
           {/* Col 1: Brand & Logo */}
-          <div className="space-y-4 md:col-span-2">
+          <div className="space-y-3 md:col-span-2">
             <div
               id="footer-logo-btn"
               onClick={() => handleNavClick('home')}
@@ -34,17 +34,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language }) => {
               <img
                 src={ASSETS.footerLogo}
                 alt="BBB LTD"
-                className="h-10 w-auto object-contain brightness-110"
+                className="h-8 w-auto object-contain brightness-110"
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-[#a1aba2] text-sm leading-relaxed max-w-md">
+            <p className="text-[#a1aba2] text-xs sm:text-sm leading-relaxed max-w-md">
               {language === 'ru'
                 ? 'Специализированная логистика опасных грузов: безопасный налив, слив и организация железнодорожных и автомобильных перевозок серной кислоты и аммиака в Республике Казахстан.'
                 : 'Қауіпті жүктердің арнайы логистикасы: Қазақстан Республикасында күкірт қышқылы мен аммиакты қауіпсіз құю, төгу және теміржол мен автокөлікпен тасымалдауды ұйымдастыру.'}
             </p>
-            <div className="flex items-center space-x-2 text-xs text-[#90f8ae] font-mono pt-1">
-              <ShieldCheck size={16} />
+            <div className="flex items-center space-x-2 text-[11px] text-[#90f8ae] font-mono pt-0.5">
+              <ShieldCheck size={15} />
               <span>Лицензированный оператор опасных грузов РК</span>
             </div>
           </div>
@@ -80,6 +80,15 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, language }) => {
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   {t.nav.services}
+                </button>
+              </li>
+              <li>
+                <button
+                  id="footer-nav-team"
+                  onClick={() => handleNavClick('team')}
+                  className="hover:text-white transition-colors cursor-pointer"
+                >
+                  {(t.nav as any).team || 'Команда'}
                 </button>
               </li>
               <li>

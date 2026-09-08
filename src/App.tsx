@@ -9,6 +9,7 @@ import { GalleryLightbox } from './components/GalleryLightbox';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { ServicesPage } from './pages/ServicesPage';
+import { TeamPage } from './pages/TeamPage';
 import { GalleryPage } from './pages/GalleryPage';
 import { ContactsPage } from './pages/ContactsPage';
 
@@ -69,6 +70,13 @@ export default function App() {
             onNavigate={setActivePage}
             language={language}
             onOpenQuoteModal={(serviceTitle) => handleOpenQuoteModal(serviceTitle)}
+          />
+        )}
+
+        {activePage === 'team' && (
+          <TeamPage
+            onNavigate={setActivePage}
+            language={language}
           />
         )}
 

@@ -1,12 +1,17 @@
 import { GalleryItem, ServiceItem, StationLocation, TeamMember } from '../types';
 import directorPhoto from '../assets/images/director_mukhyshev.jpg';
-import bbbTruckTerminal from '../assets/images/bbb_truck_terminal_1788882735423.jpg';
-import bbbEstakadaLoading from '../assets/images/bbb_estakada_loading_1788882759601.jpg';
-import bbbManifoldValves from '../assets/images/bbb_manifold_valves_1788882777384.jpg';
-import bbbCloseCorrosive from '../assets/images/bbb_close_corrosive_1788882800635.jpg';
-import bbbTruckSideview from '../assets/images/bbb_truck_sideview_1788882822194.jpg';
-import heroTrainTerminal from '../assets/images/hero_train_terminal_1788881859224.jpg';
-import railwayLogisticsHub from '../assets/images/railway_logistics_hub_1788881921295.jpg';
+
+// Real user photos from Google Drive (BBB Ltd facilities and fleet)
+import screen0 from '../assets/images/user_photos/screen_0.png';
+import screen1 from '../assets/images/user_photos/screen_1.png';
+import screen2 from '../assets/images/user_photos/screen_2.png';
+import screen3 from '../assets/images/user_photos/screen_3.png';
+import screen4 from '../assets/images/user_photos/screen_4.png';
+import screen5 from '../assets/images/user_photos/screen_5.png';
+import screen6 from '../assets/images/user_photos/screen_6.png';
+import screen7 from '../assets/images/user_photos/screen_7.png';
+import screen8 from '../assets/images/user_photos/screen_8.png';
+import screen9 from '../assets/images/user_photos/screen_9.png';
 
 export const TEAM_MEMBERS: Record<'ru' | 'kz', TeamMember[]> = {
   ru: [
@@ -87,25 +92,29 @@ export const ASSETS = {
   footerLogo: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDtHmz-BcSfW5nj5ssrxsdNsl_cFBOsHrSSZQAOmSs2tysfqeqEMXaLI-WfcrQq3cVGP-XfqVTZDwjPoIOQ1gPc7lxMTx9mKMm4g97lbsnfr7br3BYv_V_e2FDqKAikgHnczQs-Pv8_IOETA29gPz_PmrN0VDvUkKmtocr7Dkov0Q5UiXZw0-fYBQdrfThT9T4_Z-6J_WOdbp3TMEszKyge3G_3IoYyTrefaILBByGnBIPR94I6ixu94GTtw2sB-97r4g',
   
   // Hero & General
-  heroBg: bbbTruckTerminal,
-  aboutBriefImg: bbbEstakadaLoading,
+  heroBg: screen0,
+  aboutBriefImg: screen5,
   
   // Services
-  serviceAcidImg: bbbCloseCorrosive,
-  serviceAmmoniaImg: bbbTruckSideview,
-  serviceLogisticsImg: bbbTruckTerminal,
+  serviceAcidImg: screen7,
+  serviceAmmoniaImg: screen1,
+  serviceLogisticsImg: screen3,
   
   // About Page
-  aboutTruckLarge: bbbTruckSideview,
-  aboutEstakada: bbbManifoldValves,
+  aboutTruckLarge: screen1,
+  aboutEstakada: screen4,
 
-  // Gallery
-  gallery1: bbbTruckTerminal,
-  gallery2: bbbEstakadaLoading,
-  gallery3: bbbManifoldValves,
-  gallery4: bbbTruckSideview,
-  gallery5: bbbCloseCorrosive,
-  gallery6: heroTrainTerminal,
+  // Gallery (all 10 real photos from Google Drive)
+  gallery1: screen0,
+  gallery2: screen1,
+  gallery3: screen2,
+  gallery4: screen3,
+  gallery5: screen4,
+  gallery6: screen5,
+  gallery7: screen6,
+  gallery8: screen7,
+  gallery9: screen8,
+  gallery10: screen9,
 };
 
 export const STATIONS: StationLocation[] = [
@@ -160,51 +169,83 @@ export const STATIONS: StationLocation[] = [
 export const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: 'g1',
-    title: 'Площадка налива/слива',
-    category: 'filling',
-    imageUrl: ASSETS.gallery1,
-    description: 'Специализированный узел налива с непрерывным датчиковым мониторингом давления и газоанализаторами.',
-    badge: 'Безопасность',
-  },
-  {
-    id: 'g2',
-    title: 'Спецтехника',
+    title: 'Автопарк цистерн BBB Ltd',
     category: 'trucks',
-    imageUrl: ASSETS.gallery2,
-    description: 'Автоцистерны повышенной прочности из антикоррозийных сплавов с допуском ADR/ДОПОГ.',
+    imageUrl: ASSETS.gallery1,
+    description: 'Оборудованный автопарк современных тягачей с цистернами повышенной прочности для химических грузов.',
     badge: 'Автопарк',
   },
   {
+    id: 'g2',
+    title: 'Специализированная автоцистерна',
+    category: 'trucks',
+    imageUrl: ASSETS.gallery2,
+    description: 'Автоцистерна с антикоррозийным покрытием и допуском ДОПОГ/ADR для перевозки опасных веществ.',
+    badge: 'Спецтехника',
+  },
+  {
     id: 'g3',
-    title: 'Погрузочный процесс',
+    title: 'Техническое обслуживание арматуры',
     category: 'process',
     imageUrl: ASSETS.gallery3,
-    description: 'Соблюдение регламентов налива под контролем аттестованных инженеров безопасности.',
+    description: 'Инженеры и операторы BBB Ltd выполняют регулировку запорной арматуры и проверку герметичности.',
     badge: 'Операции',
   },
   {
     id: 'g4',
-    title: 'Территория объекта',
+    title: 'Тягач на территории базы',
     category: 'facilities',
     imageUrl: ASSETS.gallery4,
-    description: 'Огороженная охраняемая промышленная территория со специализированным пожаротушением и нейтрализацией.',
+    description: 'Охраняемая благоустроенная площадка стоянки и подготовки специального химического транспорта.',
     badge: 'Инфраструктура',
   },
   {
     id: 'g5',
-    title: 'Площадка и рабочее место',
-    category: 'facilities',
+    title: 'Узел налива и насосная станция',
+    category: 'filling',
     imageUrl: ASSETS.gallery5,
-    description: 'Освещенные эстакады и безопасные трапы для персонала при операциях в любое время суток.',
-    badge: 'Эстакада',
+    description: 'Трубопроводный распределительный коллектор, электронные расходомеры и пост налива автоцистерн.',
+    badge: 'Налив',
   },
   {
     id: 'g6',
-    title: 'Рабочий процесс',
-    category: 'process',
+    title: 'Сливо-наливная эстакада',
+    category: 'filling',
     imageUrl: ASSETS.gallery6,
-    description: 'Магистральные трубопроводные системы с электроприводами и аварийными клапанами сброса.',
-    badge: 'Трубопровод',
+    description: 'Специализированная металлоконструкция эстакады с трапами безопасности и рукавами для налива.',
+    badge: 'Эстакада',
+  },
+  {
+    id: 'g7',
+    title: 'Контроль задвижек и манометров',
+    category: 'process',
+    imageUrl: ASSETS.gallery7,
+    description: 'Контроль рабочего давления и перекачки опасных жидкостей аттестованным специалистом.',
+    badge: 'Безопасность',
+  },
+  {
+    id: 'g8',
+    title: 'Класс опасности 8: Едкие вещества',
+    category: 'facilities',
+    imageUrl: ASSETS.gallery8,
+    description: 'Маркировка цистерны фирменной символикой BBB Ltd и знаком опасности ADR 8 (Corrosive).',
+    badge: 'ADR-8',
+  },
+  {
+    id: 'g9',
+    title: 'Логистический комплекс и терминал',
+    category: 'facilities',
+    imageUrl: ASSETS.gallery9,
+    description: 'Обзор производственно-логистической площадки с наливными колонками и инфраструктурой BBB Ltd.',
+    badge: 'Терминал',
+  },
+  {
+    id: 'g10',
+    title: 'Пост налива автоцистерны',
+    category: 'filling',
+    imageUrl: ASSETS.gallery10,
+    description: 'Герметичное подсоединение рукава высокого давления к автоцистерне для безопасного налива.',
+    badge: 'Налив',
   },
 ];
 
